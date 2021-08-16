@@ -8,45 +8,45 @@ class NextDayCalculatorTest {
     @Test
     public void testNextDayOfDay1Month1() {
         String date = "2021-01-01";
-        LocalDate actual = LocalDate.parse("2021-01-02");
+        LocalDate expected = LocalDate.parse("2021-01-02");
 
         LocalDate nextDay = NextDayCalculator.nextDay(date);
-        assertEquals(actual, nextDay);
+        assertEquals(expected, nextDay);
     }
 
     @Test
     public void testNextDayOfDay28Month2LeapYear() {
         String date = "2020-02-28";
-        LocalDate actual = LocalDate.parse("2020-02-29");
+        LocalDate expected = LocalDate.parse("2020-02-29");
 
         LocalDate nextDay = NextDayCalculator.nextDay(date);
-        assertEquals(actual, nextDay);
+        assertEquals(expected, nextDay);
     }
 
     @Test
     public void testNextDayOfDay28Month2() {
         String date = "2021-02-28";
-        LocalDate actual = LocalDate.parse("2021-03-01");
+        LocalDate expected = LocalDate.parse("2021-03-01");
 
         LocalDate nextDay = NextDayCalculator.nextDay(date);
-        assertEquals(actual, nextDay);
+        assertEquals(expected, nextDay);
     }
 
     @Test
     public void testNextDayOfDay31Month12() {
         String date = "2021-12-31";
-        LocalDate actual = LocalDate.parse("2022-01-01");
+        LocalDate expected = LocalDate.parse("2022-01-01");
 
         LocalDate nextDay = NextDayCalculator.nextDay(date);
-        assertEquals(actual, nextDay);
+        assertEquals(expected, nextDay);
     }
 
     @Test
     public void testNextDayOfDay30Month4() {
         String date = "2021-04-30";
-        LocalDate actual = LocalDate.parse("2021-05-01");
+        LocalDate expected = LocalDate.parse("2021-05-01");
 
         LocalDate nextDay = NextDayCalculator.nextDay(date);
-        assertEquals(actual, nextDay);
+        assertEquals(expected, nextDay);
     }
 }
